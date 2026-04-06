@@ -22,6 +22,10 @@ class Car
 
 int main()
 {
+    int yearModel = 2026;
+    string make = "Kei Truck";
+    Car myCar(yearModel, make);
+    cout << "Your registered car is a " << myCar.GetYearModel() << " " << myCar.GetMake() << ".\n";
     return 0;
 }
 
