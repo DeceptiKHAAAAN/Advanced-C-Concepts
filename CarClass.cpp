@@ -68,3 +68,20 @@ void Car::SetSpeed(int newSpeed)
 {
     speed = newSpeed;
 }
+
+void Car::Accelerate()
+{
+    speed += 5;
+}
+
+void Car::Brake()
+{
+    if (speed <= 0)
+    {
+        cout << "Cannot brake anymore! You are at a complete stop.\n";
+    }
+    else
+    {
+        speed -= 5;
+    }
+}
