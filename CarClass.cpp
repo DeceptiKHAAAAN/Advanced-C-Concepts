@@ -26,6 +26,10 @@ int main()
     string make = "Kei Truck";
     Car myCar(yearModel, make);
     cout << "Your registered car is a " << myCar.GetYearModel() << " " << myCar.GetMake() << ".\n";
+    for (int i = 0; i < 5; i++)
+        myCar.Accelerate();
+    for (int i = 0; i < 5; i++)
+        myCar.Brake();
     return 0;
 }
 
@@ -75,7 +79,9 @@ void Car::SetSpeed(int newSpeed)
 
 void Car::Accelerate()
 {
+    cout << "Increasing speed by 5...";
     speed += 5;
+    cout << "     Your speed is now " << speed << endl;
 }
 
 void Car::Brake()
@@ -86,6 +92,8 @@ void Car::Brake()
     }
     else
     {
+        cout << "Decreasing speed by 5...     ";
         speed -= 5;
+        cout << "Your speed is now " << speed << endl;
     }
 }
